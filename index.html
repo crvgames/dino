@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gelişmiş Dinozor Oyunu - Tam Ekran</title>
+    <title> crgames dinozor oyunu</title>
     <style>
         body, html {
             margin: 0;
@@ -51,17 +51,17 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-// Ekran Boyutlarını Dinamik Ayarlama
+ 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     
-    // Zemin ve dinozor konumlarını ekran boyutuna göre güncelle
-    groundY = canvas.height * 0.8; // Ekranın %80'i zemin olacak
+     
+    groundY = canvas.height * 0.8; 
     dino.y = groundY - dino.height;
 }
 
-// Ses Üretici Fonksiyonu (İnce Retro Bip Sesi)
+// Ses Üretici Fonksiyonu 
 function playJumpSound() {
     try {
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -144,7 +144,7 @@ const dino = {
     height: 48,
     duckHeight: 30,
     gravity: 0.6,
-    jumpForce: -13, // Büyük ekran için zıplama gücü hafif artırıldı
+    jumpForce: -13, // Büyük ekran için zıplama  
     velocity: 0,
     isJumping: false,
     isDucking: false,
@@ -238,7 +238,7 @@ class Obstacle {
         } else if (this.type === "bird") {
             this.width = 44;
             this.height = 25;
-            // Kuş yüksekliği zemine oranla dinamik ayarlanır
+            // Kuş yüksekliği zemine oranla dinamik ayarlama
             this.y = Math.random() > 0.5 ? groundY - 110 : groundY - 65;
         }
     }
@@ -318,7 +318,7 @@ function resetGame() {
     dino.isDucking = false;
 }
 
-// Ekran boyutlandırmasını ilk kez çalıştır
+// Ekran boyutlandırmasını ilk kez çalıştırma
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
